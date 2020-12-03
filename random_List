@@ -1,0 +1,21 @@
+from random import randint
+L = []
+for i in range(20):
+    L = L + [randint(1,100)]
+print(L)
+
+ave = sum(L)/len(L)
+print(ave)
+
+print(max(L))
+print(min(L))
+
+L.sort()
+print(L[-2])
+print(L[1])
+
+count  = 0
+for i in L:
+    if i%2 == 0:
+        count = count + 1
+print('total even number in the list: ',count)
