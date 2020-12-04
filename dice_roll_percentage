@@ -1,0 +1,75 @@
+from random import randint  # import random function
+
+# Define default variable for 1st and 2nd dice
+D1 = []
+D2 = []
+
+# define default variable for total of each number occured
+total2 = 0
+total3 = 0
+total4 = 0
+total5 = 0
+total6 = 0
+total7 = 0
+total8 = 0
+total9 = 0
+total10 = 0
+total11 = 0
+total12 = 0
+
+# Roll for 10,000 times
+for i in range(10000):  
+
+# Define number from each dice (1-6)
+    D1.append(randint(1,6))  
+    D2.append(randint(1,6))
+    
+# Calculate how many times each number will occured in 10,000 roll    
+    if D1[i]+D2[i] == 2:
+        total2 = total2 + 1
+    elif D1[i]+D2[i] == 3:
+        total3 = total3 + 1
+    elif D1[i]+D2[i] == 4:
+        total4 = total4 + 1
+    elif D1[i]+D2[i] == 5:
+        total5 = total5 + 1
+    elif D1[i]+D2[i] == 6:
+        total6 = total6 + 1
+    elif D1[i]+D2[i] == 7:
+        total7 = total7 + 1
+    elif D1[i]+D2[i] == 8:
+        total8 = total8 + 1
+    elif D1[i]+D2[i] == 9:
+        total9 = total9 + 1
+    elif D1[i]+D2[i] == 10:
+        total10 = total10 + 1
+    elif D1[i]+D2[i] == 11:
+        total11 = total11 + 1
+    elif D1[i]+D2[i] == 12:
+        total12 = total12 + 1
+        
+# Find the percentage 
+chance2 = int(round(total2*100/10000,0))
+chance3 = int(round(total3*100/10000,0))
+chance4 = int(round(total4*100/10000,0))
+chance5 = int(round(total5*100/10000,0))
+chance6 = int(round(total6*100/10000,0))
+chance7 = int(round(total7*100/10000,0))
+chance8 = int(round(total8*100/10000,0))
+chance9 = int(round(total9*100/10000,0))
+chance10 = int(round(total10*100/10000,0))
+chance11 = int(round(total11*100/10000,0))
+chance12 = int(round(total12*100/10000,0))
+
+# Print out the result
+print('Percentage of rolls 2 is: ',chance2,'%')
+print('Percentage of rolls 3 is: ',chance3,'%')
+print('Percentage of rolls 4 is: ',chance4,'%')
+print('Percentage of rolls 5 is: ',chance5,'%')
+print('Percentage of rolls 6 is: ',chance6,'%')
+print('Percentage of rolls 7 is: ',chance7,'%')
+print('Percentage of rolls 8 is: ',chance8,'%')
+print('Percentage of rolls 9 is: ',chance9,'%')
+print('Percentage of rolls 10 is: ',chance10,'%')
+print('Percentage of rolls 11 is: ',chance11,'%')
+print('Percentage of rolls 12 is: ',chance12,'%')
