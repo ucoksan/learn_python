@@ -1,0 +1,21 @@
+L = eval(input('Enter the length: '))
+U = input('Enter the unit of length: ')
+C = input('Enter the unit you want to convert to: ')
+D = [['inch','yards',0.03],['inch','mile',0.000016],['inch','mm',25.4],
+     ['inch','cm',2.54],['inch','m',0.025],['inch','km',0.000025],
+     ['yards','inch',36],['yards','mile',0.0006],['yards','mm',914.4],
+     ['yards','cm',91.4],['yards','m',0.91],['yards','km',0.0009],
+     ['mile','inch',63360],['mile','yards',1760],['mile','mm',1609344],
+     ['mile','cm',160934],['mile','m',1609.34],['mile','km',1.6],
+     ['mm','inch',0.04],['mm','yards',0.001],['mm','mile',1/1609344],
+     ['mm','cm',0.1],['mm','m',0.001],['mm','km',0.000001],
+     ['cm','inch',0.4],['cm','yards',0.01],['cm','mile',1/160934],
+     ['cm','mm',10],['cm','m',0.01],['cm','km',0.00001],
+     ['m','inch',39.4],['m','yards',1.1],['m','mile',0.0006],
+     ['m','mm',1000],['m','cm',100],['m','km',0.001],
+     ['km','inch',39370],['km','yards',1093.6],['km','mile',0.6],
+     ['km','mm',1000000],['km','cm',100000],['km','m',1000]]
+l = [i for i in D if D[D.index(i)][0] == U and D[D.index(i)][1] == C]
+print('Same as: ',round(L*l[0][-1],2),C)
+
+
